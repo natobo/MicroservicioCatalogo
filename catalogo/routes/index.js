@@ -4,7 +4,7 @@ var Product = require('../models/product')
 
 
 /* GET home page. */
-router.get('/', function(req, res, next) {
+router.get('/catalogo', function(req, res, next) {
   Product.find(function(err,docs){
     res.render('shop/index', { title: 'Arquiteam',products: docs });
   }).lean();
